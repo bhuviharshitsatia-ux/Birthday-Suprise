@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #fff0f5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 400px;
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 15px rgba(255,92,138,0.3); }
+  50% { box-shadow: 0 0 30px rgba(255,92,138,0.6); }
+  100% { box-shadow: 0 0 15px rgba(255,92,138,0.3); }
+}
+
+h1 {
+  color: #ff5c8a;
+  margin-bottom: 10px;
+}
+
+.name {
+  color: #ff3366;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+button {
+  background: #ff5c8a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff3366;
+}
+
+#message {
+  margin-top: 30px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-line;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Floating emojis */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+/* Confetti fall */
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
